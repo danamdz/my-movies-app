@@ -1,3 +1,4 @@
+import Slider from "react-slick";
 import MovieCard from "./MovieCard";
 import Link from "next/link";
 
