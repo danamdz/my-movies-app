@@ -9,7 +9,7 @@ const links = [
   { href: '/popular', label: 'Popular' },
   { href: '/top-rated', label: 'Top Rated' },
   { href: '/now-playing', label: 'Now Playing' },
-  { href: '/favorites', label: 'My Favorites' },
+  { href: '/my-favorites', label: 'My Favorites' },
 ];
 
 const Header = () => {
@@ -50,9 +50,7 @@ const Header = () => {
         </Link>
         <nav className="flex gap-1 sm:gap-3 md:gap-6">
           {links.map(({ href, label }) => {
-            const active =
-              pathname === href ||
-              (href === '/favorites' && pathname === '/my-favorites'); // compatibilidad ruta vieja
+            const active = pathname === href;
             return (
               <Link
                 key={href}
